@@ -2,32 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Recommendation</title>
+  <title>TravelBloom - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="travel_recommendation.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Discover Your Next Adventure</h1>
     <p>Explore destinations and cultures around the world.</p>
+    
+    <!-- Search Bar + Buttons -->
     <input type="text" id="search" placeholder="Search destinations...">
-    <button id="book">Book Now</button>
-    <div id="results"></div>
+    <button id="searchBtn">Search</button>
+    <button id="clearBtn">Clear</button>
   </section>
 
+  <!-- Results Section -->
+  <section id="results"></section>
+
+  <!-- Footer -->
   <footer>
-    <p>Follow us on social media!</p>
-    <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a>
+    <p>© 2026 TravelBloom | Follow us on Instagram | Twitter | Facebook</p>
   </footer>
 
+  <!-- JavaScript -->
   <script src="travel_recommendation.js"></script>
 </body>
 </html>
