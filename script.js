@@ -1,3 +1,18 @@
+const searchInput = document.getElementById('search');
+const searchButton = document.getElementById('searchBtn');
+const clearButton = document.getElementById('clearBtn');
+const resultsDiv = document.getElementById('results');
+
+searchButton.addEventListener('click', () => {
+  const keyword = searchInput.value.toLowerCase().trim();
+  showRecommendations(keyword);
+});
+
+clearButton.addEventListener('click', () => {
+  resultsDiv.innerHTML = '';
+  searchInput.value = '';
+});
+
 function showRecommendations(keyword) {
   fetch('travel_recommendation_api.json')
     .then(response => response.json())
@@ -12,7 +27,6 @@ function showRecommendations(keyword) {
         results = data.countries;
       }
 
-      const resultsDiv = document.getElementById('results');
       resultsDiv.innerHTML = '';
 
       if (results.length === 0) {
@@ -32,6 +46,7 @@ function showRecommendations(keyword) {
     })
     .catch(error => console.error('Error loading data:', error));
 }
+
 
 
     // Clear button logic
