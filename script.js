@@ -1,23 +1,38 @@
-// Fetch data from JSON file
-fetch('travel_recommendation_api.json')
-  .then(response => response.json())
-  .then(data => {
-    console.log('Data loaded successfully:', data);
+function showRecommendations(keyword) {
+  fetch('travel_recommendation_api.json')
+    .then(response => response.json())
+    .then(data => {
+      let results = [];
 
-    const searchInput = document.getElementById('search');
-    const searchButton = document.getElementById('searchBtn');
-    const clearButton = document.getElementById('clearBtn');
-    const resultsDiv = document.getElementById('results');
+      if (keyword.includes('beach') || keyword.includes('beaches')) {
+        results = data.beaches;
+      } else if (keyword.includes('temple') || keyword.includes('temples')) {
+        results = data.temples;
+      } else if (keyword.includes('country') || keyword.includes('countries')) {
+        results = data.countries;
+      }
 
-    // Search button logic
-    searchButton.addEventListener('click', () => {
-      const keyword = searchInput.value.toLowerCase().trim();
-      if (!keyword) {
-        alert('Please enter a keyword like beach, temple, or country.');
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+
+      if (results.length === 0) {
+        resultsDiv.innerHTML = '<p>No results found.</p>';
         return;
       }
-      showRecommendations(keyword, data);
-    });
+
+      results.forEach(place => {
+        const card = `
+          <div class="card">
+            <img src="${place.imageUrl}" alt="${place.name}">
+            <h3>${place.name}</h3>
+            <p>${place.description}</p>
+          </div>`;
+        resultsDiv.innerHTML += card;
+      });
+    })
+    .catch(error => console.error('Error loading data:', error));
+}
+
 
     // Clear button logic
     clearButton.addEventListener('click', () => {
