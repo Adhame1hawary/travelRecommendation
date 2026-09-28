@@ -1,0 +1,48 @@
+{
+  "beaches": [
+    {
+      "name": "Bora Bora, French Polynesia",
+      "imageUrl": "images/bora_bora.jpg",
+      "description": "An island known for its turquoise waters and luxurious overwater bungalows."
+    },
+    {
+      "name": "Copacabana Beach, Brazil",
+      "imageUrl": "images/copacabana.jpg",
+      "description": "A famous beach in Rio de Janeiro with a vibrant atmosphere and scenic views."
+    },
+    {
+      "name": "Bondi Beach, Australia",
+      "imageUrl": "images/bondi_beach.jpg",
+      "description": "A popular beach in Sydney known for surfing and golden sands."
+    }
+  ],
+  "temples": [
+    {
+      "name": "Angkor Wat, Cambodia",
+      "imageUrl": "images/angkor_wat.jpg",
+      "description": "The largest religious monument in the world, known for its stunning architecture."
+    },
+    {
+      "name": "Golden Temple, India",
+      "imageUrl": "images/golden_temple.jpg",
+      "description": "A sacred Sikh temple in Amritsar, covered in gold and surrounded by water."
+    },
+    {
+      "name": "Wat Arun, Thailand",
+      "imageUrl": "images/wat_arun.jpg",
+      "description": "The Temple of Dawn, located on the banks of the Chao Phraya River in Bangkok."
+    }
+  ],
+  "countries": [
+    {
+      "name": "Japan",
+      "imageUrl": "images/japan.jpg",
+      "description": "A country blending ancient traditions with cutting-edge technology."
+    },
+    {
+      "name": "Italy",
+      "imageUrl": "images/italy.jpg",
+      "description": "Known for its rich history, art, and world-famous cuisine."
+    }
+  ]
+}
